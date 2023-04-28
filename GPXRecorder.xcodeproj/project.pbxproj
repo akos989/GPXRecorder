@@ -16,6 +16,10 @@
 		A740BEEA29FC0CD60093C0CF /* GPXRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A740BEE929FC0CD60093C0CF /* GPXRecorderTests.swift */; };
 		A740BEF429FC0CD60093C0CF /* GPXRecorderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A740BEF329FC0CD60093C0CF /* GPXRecorderUITests.swift */; };
 		A740BEF629FC0CD60093C0CF /* GPXRecorderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A740BEF529FC0CD60093C0CF /* GPXRecorderUITestsLaunchTests.swift */; };
+		A740BF0329FC12DA0093C0CF /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A740BF0229FC12DA0093C0CF /* LocationService.swift */; };
+		A740BF0629FC132B0093C0CF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A740BF0529FC132B0093C0CF /* RxCocoa */; };
+		A740BF0829FC132B0093C0CF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A740BF0729FC132B0093C0CF /* RxSwift */; };
+		A740BF0A29FC13690093C0CF /* RecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A740BF0929FC13690093C0CF /* RecorderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		A740BEEF29FC0CD60093C0CF /* GPXRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPXRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A740BEF329FC0CD60093C0CF /* GPXRecorderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXRecorderUITests.swift; sourceTree = "<group>"; };
 		A740BEF529FC0CD60093C0CF /* GPXRecorderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXRecorderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A740BF0229FC12DA0093C0CF /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		A740BF0929FC13690093C0CF /* RecorderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A740BF0829FC132B0093C0CF /* RxSwift in Frameworks */,
+				A740BF0629FC132B0093C0CF /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +114,8 @@
 				A740BEDB29FC0CD60093C0CF /* Assets.xcassets */,
 				A740BEDD29FC0CD60093C0CF /* LaunchScreen.storyboard */,
 				A740BEE029FC0CD60093C0CF /* Info.plist */,
+				A740BF0229FC12DA0093C0CF /* LocationService.swift */,
+				A740BF0929FC13690093C0CF /* RecorderService.swift */,
 			);
 			path = GPXRecorder;
 			sourceTree = "<group>";
@@ -143,6 +153,10 @@
 			dependencies = (
 			);
 			name = GPXRecorder;
+			packageProductDependencies = (
+				A740BF0529FC132B0093C0CF /* RxCocoa */,
+				A740BF0729FC132B0093C0CF /* RxSwift */,
+			);
 			productName = GPXRecorder;
 			productReference = A740BECF29FC0CD40093C0CF /* GPXRecorder.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = A740BEC629FC0CD30093C0CF;
+			packageReferences = (
+				A740BF0429FC132B0093C0CF /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = A740BED029FC0CD40093C0CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A740BF0A29FC13690093C0CF /* RecorderService.swift in Sources */,
 				A740BED729FC0CD40093C0CF /* ViewController.swift in Sources */,
 				A740BED329FC0CD40093C0CF /* AppDelegate.swift in Sources */,
+				A740BF0329FC12DA0093C0CF /* LocationService.swift in Sources */,
 				A740BED529FC0CD40093C0CF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +621,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A740BF0429FC132B0093C0CF /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A740BF0529FC132B0093C0CF /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A740BF0429FC132B0093C0CF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		A740BF0729FC132B0093C0CF /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A740BF0429FC132B0093C0CF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A740BEC729FC0CD30093C0CF /* Project object */;
 }
