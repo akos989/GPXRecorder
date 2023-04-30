@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0F932429FEE8B00068F8BB /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0F932329FEE8B00068F8BB /* LocationTableViewController.swift */; };
 		A740BED329FC0CD40093C0CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A740BED229FC0CD40093C0CF /* AppDelegate.swift */; };
 		A740BED529FC0CD40093C0CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A740BED429FC0CD40093C0CF /* SceneDelegate.swift */; };
 		A740BED729FC0CD40093C0CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A740BED629FC0CD40093C0CF /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F0F932329FEE8B00068F8BB /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		A740BECF29FC0CD40093C0CF /* GPXRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPXRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A740BED229FC0CD40093C0CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A740BED429FC0CD40093C0CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F0F932029FEE6F90068F8BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F0F932129FEE7010068F8BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A740BED629FC0CD40093C0CF /* ViewController.swift */,
+				0F0F932329FEE8B00068F8BB /* LocationTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F0F932229FEE7090068F8BB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A740BF0229FC12DA0093C0CF /* LocationService.swift */,
+				A740BF0929FC13690093C0CF /* RecorderService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		A740BEC629FC0CD30093C0CF = {
 			isa = PBXGroup;
 			children = (
@@ -109,13 +136,13 @@
 			children = (
 				A740BED229FC0CD40093C0CF /* AppDelegate.swift */,
 				A740BED429FC0CD40093C0CF /* SceneDelegate.swift */,
-				A740BED629FC0CD40093C0CF /* ViewController.swift */,
 				A740BED829FC0CD40093C0CF /* Main.storyboard */,
 				A740BEDB29FC0CD60093C0CF /* Assets.xcassets */,
 				A740BEDD29FC0CD60093C0CF /* LaunchScreen.storyboard */,
 				A740BEE029FC0CD60093C0CF /* Info.plist */,
-				A740BF0229FC12DA0093C0CF /* LocationService.swift */,
-				A740BF0929FC13690093C0CF /* RecorderService.swift */,
+				0F0F932129FEE7010068F8BB /* View */,
+				0F0F932029FEE6F90068F8BB /* Model */,
+				0F0F932229FEE7090068F8BB /* Service */,
 			);
 			path = GPXRecorder;
 			sourceTree = "<group>";
@@ -277,6 +304,7 @@
 			files = (
 				A740BF0A29FC13690093C0CF /* RecorderService.swift in Sources */,
 				A740BED729FC0CD40093C0CF /* ViewController.swift in Sources */,
+				0F0F932429FEE8B00068F8BB /* LocationTableViewController.swift in Sources */,
 				A740BED329FC0CD40093C0CF /* AppDelegate.swift in Sources */,
 				A740BF0329FC12DA0093C0CF /* LocationService.swift in Sources */,
 				A740BED529FC0CD40093C0CF /* SceneDelegate.swift in Sources */,
@@ -456,20 +484,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VG8YLNMF52;
+				DEVELOPMENT_TEAM = UMLAGLZ8L9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GPXRecorder/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need permission to access your location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hu.akos.morvai.GPXRecorder;
+				PRODUCT_BUNDLE_IDENTIFIER = hu.akos.morvai.gpx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -484,14 +514,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VG8YLNMF52;
+				DEVELOPMENT_TEAM = UMLAGLZ8L9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GPXRecorder/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need permission to access your location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
