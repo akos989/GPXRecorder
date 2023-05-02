@@ -21,6 +21,7 @@
 		A740BF0629FC132B0093C0CF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A740BF0529FC132B0093C0CF /* RxCocoa */; };
 		A740BF0829FC132B0093C0CF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A740BF0729FC132B0093C0CF /* RxSwift */; };
 		A740BF0A29FC13690093C0CF /* RecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A740BF0929FC13690093C0CF /* RecorderService.swift */; };
+		F4EF56D12A00E7AD0017FDC8 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EF56D02A00E7AD0017FDC8 /* LocationDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		A740BEF529FC0CD60093C0CF /* GPXRecorderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXRecorderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A740BF0229FC12DA0093C0CF /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A740BF0929FC13690093C0CF /* RecorderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderService.swift; sourceTree = "<group>"; };
+		F4EF56D02A00E7AD0017FDC8 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
+		F4EF56D22A00ECED0017FDC8 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 			children = (
 				A740BED629FC0CD40093C0CF /* ViewController.swift */,
 				0F0F932329FEE8B00068F8BB /* LocationTableViewController.swift */,
+				F4EF56D02A00E7AD0017FDC8 /* LocationDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,6 +147,7 @@
 				0F0F932129FEE7010068F8BB /* View */,
 				0F0F932029FEE6F90068F8BB /* Model */,
 				0F0F932229FEE7090068F8BB /* Service */,
+				F4EF56D22A00ECED0017FDC8 /* Location.gpx */,
 			);
 			path = GPXRecorder;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 			files = (
 				A740BF0A29FC13690093C0CF /* RecorderService.swift in Sources */,
 				A740BED729FC0CD40093C0CF /* ViewController.swift in Sources */,
+				F4EF56D12A00E7AD0017FDC8 /* LocationDetailViewController.swift in Sources */,
 				0F0F932429FEE8B00068F8BB /* LocationTableViewController.swift in Sources */,
 				A740BED329FC0CD40093C0CF /* AppDelegate.swift in Sources */,
 				A740BF0329FC12DA0093C0CF /* LocationService.swift in Sources */,
